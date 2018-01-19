@@ -1,0 +1,21 @@
+
+#include <PWM.h>
+
+int outputPin = 11;
+
+//For testing
+int freqInput = 100;          //10-10000 Hz (I wanted that range only)
+int dutyCycleInput = 70;      //1-65535
+
+void setup()
+{
+  InitTimersSafe();
+}
+
+void loop()
+{
+//Get inputs from either serial or through pot
+//So we have Frequency and Duty cycle in variables 'freqInput' & 'dutyCycleInput' respectively in int
+SetPinFrequencySafe(outputPin, freqInput );
+pwmWriteHR(outputPin, dutyCycleInput );
+}

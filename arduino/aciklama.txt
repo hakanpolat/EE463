@@ -1,0 +1,13 @@
+Potansiyometre Orta Ucu Analog 0 Giriþine baðlý. 
+potansiyometre ile PWM sinyali duty circle ayarlýyoruz. PWM çýkýþ 5 numaralý Pin.
+5 Numaralý Pin için
+TCCR0B = TCCR0B & 0b11111000 | 0X02; kodunu eklersek aþaðýdaki frekanslarý elde etmiþ oluyoruz.
+
+0X02 yazarsak 7,8khz, 0x03 yazarsak 976hz sinyalimiz oluyor. Hep bunlarý katlarý þeklinde bir artýþ var. Ben 15khz elde etmek istiyorum, nasýl yapabilirim. Lütfen çözüm önerisi verin, link veya baþka konulara örnek vermeyin.
+
+Çarpan Frekansý
+0x01	62500
+0x02	7812.5
+0x03	976.5625
+0x04	244.140625
+0x05	61.03515625
